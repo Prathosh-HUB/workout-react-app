@@ -1,0 +1,102 @@
+.workout-layout {
+  display: flex;
+  height: 90vh;
+  background: #0f172a;
+  color: white;
+  padding: 40px;
+  gap: 40px;
+}
+
+/* LEFT CARD */
+.workout-card {
+  flex: 2;
+  background: #1e293b;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.workout-card h2 {
+  margin-bottom: 15px;
+}
+
+.workout-video {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;   /* 🔥 THIS REMOVES SPACE */
+  border-radius: 12px;
+}
+
+
+/* RIGHT TIMER */
+.timer-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-circle {
+  font-size: 48px;
+  font-weight: bold;
+  background: #22c55e;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+
+
+.start-btn {
+  background: #22c55e;
+  color: white;
+  padding: 12px 28px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.start-btn:hover {
+  background: #16a34a;
+}
+
+.next-btn {
+  background: #3b82f6;
+  color: white;
+  padding: 12px 28px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.reset-btn {
+  background: #3b82f6;
+  color: white;
+  padding: 12px 28px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.next-btn:hover {
+  background: #2563eb;
+}
+.bg-image {
+  position: fixed;
+  inset: 0;
+  background-image: url("/bg-gym.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  transform: scale(1.1);
+  z-index: -2;
+}

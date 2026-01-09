@@ -1,0 +1,119 @@
+Page Wrapper
+.focus-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Reuse same blurred background */
+.bg-image {
+  position: fixed;
+  inset: 0;
+  background-image: url("/bg-gym.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  transform: scale(1.1);
+  z-index: -2;
+}
+
+.bg-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Content */
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 40px 20px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+/* Title */
+.focus-title {
+  font-size: 38px;
+  margin-bottom: 8px;
+}
+
+.focus-subtitle {
+  font-size: 15px;
+  opacity: 0.85;
+  margin-bottom: 40px;
+}
+
+/* Grid */
+.focus-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Focus Card */
+.focus-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  padding: 18px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: black;
+}
+
+.focus-card:hover {
+  transform: scale(1.08);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Image Placeholder */
+.focus-image {
+  height: 140px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+.focus-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* 🔑 THIS FIXES EVERYTHING */
+  display: block;
+}
+/* Text */
+.focus-card h2 {
+  font-size: 18px;
+}
+
+.focus-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.focus-card {
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.focus-card:hover {
+  transform: scale(1.05);
+}
+
+.focus-image {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.focus-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
